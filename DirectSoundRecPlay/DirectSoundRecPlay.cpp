@@ -287,7 +287,7 @@ void copyToPlay()
     const LONG64 ms=GetTickCount64();
     double dt = (double)(ms - g_recbuf->initialMs) / 1000.0;
     float avgPushPerSecond = (g_recbuf->totalPushed) / dt;
-    printf("copytoplay: used:%d tot:%d avgPush:%f avgShift:%f\n", g_recbuf->used, g_recbuf->totalPushed,avgPushPerSecond);
+    printf("copytoplay: used:%d tot:%d avgPush:%f\n", g_recbuf->used, g_recbuf->totalPushed,avgPushPerSecond);
  #if 1
     const int N = 1024;
     if (g_recbuf->used >= N && getRoom(g_playbuf) >= N) {
